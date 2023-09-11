@@ -42,6 +42,17 @@ document.querySelector('.check').addEventListener ('click', function () {
         document.querySelector('body').style.backgroundColor = 'red'
     }
 
+});
+
+
+
+let _ta = document.querySelector('.again')
+
+_ta.addEventListener('click', function () {
+    document.querySelector('body').style.backgroundColor ='#222';
+    document.querySelector('.message').textContent = 'Start guessing...'
+    document.querySelector('.guess').value = 0;
+
 })
 
 // const cameraFeed = document.getElementById('cameraFeed')
