@@ -8,9 +8,10 @@
 
 // document.querySelector('.number').textContent = 13
 // console.log(document.querySelector('.number').textContent)
-
+ 
 let randomNumber = Math.trunc(Math.random()*20+1)
-let score = 19
+let score = 20
+let highscore=0;
 document.querySelector('.check').addEventListener ('click', function () {
     let x = Number((document.querySelector('.guess').value))
    
@@ -24,16 +25,23 @@ document.querySelector('.check').addEventListener ('click', function () {
         document.querySelector('.message').textContent = 'Congrats you got it right'
         document.querySelector('body').style.backgroundColor = 'green'
         document.querySelector('.number').style.width = '30rem'
+
+        document.querySelector('.highscore').textContent = score > highscore? score: highscore;
+
     }
     
     else if (x > randomNumber) {
+        score--;
         document.querySelector('.message').textContent = 'Too high'
-        document.querySelector('.score').textContent = score--;
+        document.querySelector('body').style.backgroundColor = 'orange'
+        document.querySelector('.score').textContent = score;
     } 
     
     else if (x < randomNumber) {
+        score--;
         document.querySelector('.message').textContent = 'Too low'
-        document.querySelector('.score').textContent = score--;
+        document.querySelector('body').style.backgroundColor = 'b'
+        document.querySelector('.score').textContent = score;
     }
 
     if (score < 0) {
@@ -45,15 +53,17 @@ document.querySelector('.check').addEventListener ('click', function () {
 });
 
 
-
-let _ta = document.querySelector('.again')
-
-_ta.addEventListener('click', function () {
+document.querySelector('.again').addEventListener('click', function () {
+    score=20;
+    
     document.querySelector('body').style.backgroundColor ='#222';
     document.querySelector('.message').textContent = 'Start guessing...'
     document.querySelector('.guess').value = 0;
+    document.querySelector('.number').textContent = '?'
+    document.querySelector('.number').style.width = '15rem'
+    document.querySelector('.score').textContent = score;
+});
 
-})
 
 // const cameraFeed = document.getElementById('cameraFeed')
 
