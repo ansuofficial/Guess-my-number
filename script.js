@@ -55,7 +55,7 @@ document.querySelector('.check').addEventListener ('click', function () {
 
 document.querySelector('.again').addEventListener('click', function () {
     score=20;
-    
+
     document.querySelector('body').style.backgroundColor ='#222';
     document.querySelector('.message').textContent = 'Start guessing...'
     document.querySelector('.guess').value = 0;
@@ -71,3 +71,11 @@ document.querySelector('.again').addEventListener('click', function () {
 // .then(stream => {
 //     cameraFeed.srcObject = stream;
 // })
+
+// const __rom = () => {
+//     let calcsum = (70*50) /12
+//     return calcsum;
+// }
+
+// console.log(__rom ())
+
