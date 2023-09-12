@@ -33,14 +33,12 @@ document.querySelector('.check').addEventListener ('click', function () {
     else if (x > randomNumber) {
         score--;
         document.querySelector('.message').textContent = 'Too high'
-        document.querySelector('body').style.backgroundColor = 'orange'
         document.querySelector('.score').textContent = score;
     } 
     
     else if (x < randomNumber) {
         score--;
         document.querySelector('.message').textContent = 'Too low'
-        document.querySelector('body').style.backgroundColor = 'b'
         document.querySelector('.score').textContent = score;
     }
 
