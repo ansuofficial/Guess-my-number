@@ -8,7 +8,7 @@
 
 // document.querySelector('.number').textContent = 13
 // console.log(document.querySelector('.number').textContent)
- 
+
 let randomNumber = Math.trunc(Math.random()*20+1)
 let score = 20
 let highscore=0;
@@ -17,6 +17,7 @@ const message = getElement('.message')
 const number = getElement('.number')
 const _body = getElement('body')
 const guess = getElement('.guess')
+const again = getElement('.again')
 
 function getElement (element) {
     const item = document.querySelector(element)
@@ -60,7 +61,14 @@ getElement('.check').addEventListener ('click', function () {
 
 });
 
-getElement('.again').addEventListener('click', function () {
+again.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        // Execute your desired function or action here
+        alert("Enter key was pressed!");
+    }
+});
+
+again.addEventListener('click', function () {
     randomNumber = Math.trunc(Math.random()*20+1)
     score=20;
 
@@ -71,11 +79,3 @@ getElement('.again').addEventListener('click', function () {
     number.style.width = '15rem'
     getElement('.score').textContent = score;
 });
-
-// const cameraFeed = document.getElementById('cameraFeed')
-
-// navigator.mediaDevices.getUserMedia({video:true})
-// .then(stream => {
-//     cameraFeed.srcObject = stream;
-// })
-
