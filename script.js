@@ -1,14 +1,5 @@
 'use strict';
 
-// document.querySelector('.message').textContent= 'Correct number'
-// console.log(document.querySelector('.message').textContent)
-
-// document.querySelector('.guess').value = 23
-// console.log(document.querySelector('.guess').value)
-
-// document.querySelector('.number').textContent = 13
-// console.log(document.querySelector('.number').textContent)
-
 let randomNumber = Math.trunc(Math.random()*20+1)
 let score = 20
 let highscore=0;
@@ -59,13 +50,6 @@ getElement('.check').addEventListener ('click', function () {
         _body.style.backgroundColor = 'red'
     }
 
-});
-
-again.addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        // Execute your desired function or action here
-        alert("Enter key was pressed!");
-    }
 });
 
 again.addEventListener('click', function () {
