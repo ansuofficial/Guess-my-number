@@ -38,7 +38,7 @@ getElement('.check').addEventListener ('click', function () {
         number.style.width = '30rem'
 
         getElement('.highscore').textContent = score > highscore? score: highscore;
-
+        
     }
     
     else if (x > randomNumber) {
